@@ -1,12 +1,10 @@
 import { RouterGenerator } from 'common/utils/routerGenerator';
-import Portlet from './Portlet';
-import Spinners from './Spinners';
-import Alerts from './Alerts';
-import Progress from './Progress';
+import Base from './Base';
+import Portlets from './Portlets';
+import Buttons from './Buttons';
 
 export const routes = new RouterGenerator('/components')
-  .addRoute('/portlet', Portlet, true)
-  .addRoute('/spinners', Spinners, true)
-  .addRoute('/alerts', Alerts, true)
-  .addRoute('/progress', Progress, true)
+  .addRoute('/base', Base)
+  .addRoute('/portlets', Portlets)
+  .addRoute('/buttons', Buttons)
   .getRoutes();

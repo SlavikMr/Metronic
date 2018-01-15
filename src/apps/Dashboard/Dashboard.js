@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Switch, Redirect, Link } from 'react-router-dom';
+import { Switch, Redirect, NavLink } from 'react-router-dom';
 
 import RouteWithSubRoutes from 'common/components/RouteWithSubRoutes';
 import { UserActions } from 'apps/User/actions';
@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
                   </h4>
                   <i className="m-menu__section-icon flaticon-more-v3" />
                 </li>
-                <li className="m-menu__item m-menu__item--submenu m-menu__item--open">
+                <li className="m-menu__item m-menu__item--submenu">
                   <a href="" className="m-menu__link m-menu__toggle">
                     <i className="m-menu__link-icon flaticon-layers" />
                     <span className="m-menu__link-text">Base</span>
@@ -67,28 +67,105 @@ export default class Dashboard extends Component {
                         </a>
                       </li>
                       <li className="m-menu__item">
-                        <Link to="/components/portlet" className="m-menu__link">
-                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
-                          <span className="m-menu__link-text">Block UI</span>
-                        </Link>
-                      </li>
-                      <li className="m-menu__item">
-                        <Link to="/components/progress" className="m-menu__link">
+                        <NavLink
+                          to="/components/base/progress"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
                           <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
                           <span className="m-menu__link-text">Progress</span>
-                        </Link>
+                        </NavLink>
                       </li>
                       <li className="m-menu__item">
-                        <Link to="/components/alerts" className="m-menu__link">
+                        <NavLink
+                          to="/components/base/alerts"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
                           <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
                           <span className="m-menu__link-text">Alerts</span>
-                        </Link>
+                        </NavLink>
                       </li>
                       <li className="m-menu__item">
-                        <Link to="/components/spinners" className="m-menu__link">
+                        <NavLink
+                          to="/components/base/spinners"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
                           <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
                           <span className="m-menu__link-text">Spinner</span>
-                        </Link>
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="m-menu__item m-menu__item--submenu m-menu__item--open">
+                  <a href="" className="m-menu__link m-menu__toggle">
+                    <i className="m-menu__link-icon flaticon-interface-1" />
+                    <span className="m-menu__link-text">Portlets</span>
+                    <i className="m-menu__ver-arrow la la-angle-right" />
+                  </a>
+                  <div className="m-menu__submenu">
+                    <span className="m-menu__arrow" />
+                    <ul className="m-menu__subnav">
+                      <li className="m-menu__item  m-menu__item--parent">
+                        <a href="" className="m-menu__link ">
+                          <span className="m-menu__link-text">Portlets</span>
+                        </a>
+                      </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/portlets/base"
+                          exact
+                          className="m-menu__link"
+                          activeClassName="m-menu__link-selected"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Base Portlets</span>
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="m-menu__item m-menu__item--submenu m-menu__item--open">
+                  <a href="" className="m-menu__link m-menu__toggle">
+                    <i className="m-menu__link-icon flaticon-multimedia-1" />
+                    <span className="m-menu__link-text">Buttons</span>
+                    <i className="m-menu__ver-arrow la la-angle-right" />
+                  </a>
+                  <div className="m-menu__submenu">
+                    <span className="m-menu__arrow" />
+                    <ul className="m-menu__subnav">
+                      <li className="m-menu__item  m-menu__item--parent">
+                        <a href="" className="m-menu__link ">
+                          <span className="m-menu__link-text">Buttons</span>
+                        </a>
+                      </li>
+                      <li className="m-menu__item m-menu__item--submenu m-menu__item--expanded m-menu__item--open">
+                        <a href="" className="m-menu__link m-menu__toggle">
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Button Base</span>
+                          <i className="m-menu__ver-arrow la la-angle-right" />
+                        </a>
+                        <div className="m-menu__submenu">
+                          <span className="m-menu__arrow" />
+                          <ul className="m-menu__subnav">
+                            <li className="m-menu__item">
+                              <NavLink
+                                to="/components/buttons/default"
+                                exact
+                                className="m-menu__link"
+                                activeClassName="m-menu__link-selected"
+                              >
+                                <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                                <span className="m-menu__link-text">Default Style</span>
+                              </NavLink>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
                     </ul>
                   </div>
