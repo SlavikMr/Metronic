@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Body = ({ scrollable = false, children = undefined }) => {
+const Body = ({ scrollable, children }) => {
   const styles = {
     overflow: 'auto',
     maxHeight: '200px',
@@ -20,9 +20,14 @@ const Body = ({ scrollable = false, children = undefined }) => {
   );
 };
 
+Body.defaultProps = {
+  scrollable: false,
+  children: null,
+};
+
 Body.propTypes = {
-  scrollable: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
+  scrollable: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 export default Body;

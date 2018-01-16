@@ -11,16 +11,7 @@ import Tools from './PortletParts/Tools';
 import ToolsItem from './PortletParts/ToolsItem';
 
 
-const Portlet = ({
-  rounded = false,
-  nonShadow = false,
-  bordered = false,
-  semiBordered = false,
-  smallHead = false,
-  dark = false,
-  children = null,
-  bg = '',
-}) => {
+const Portlet = ({ rounded, nonShadow, bordered, semiBordered, smallHead, dark, bg, children }) => {
   const portletClass = ClassNames(
     { 'm-portlet': true },
     { 'm-portlet--rounded': rounded },
@@ -38,15 +29,26 @@ const Portlet = ({
   );
 };
 
+Portlet.defaultProps = {
+  rounded: false,
+  nonShadow: false,
+  bordered: false,
+  semiBordered: false,
+  smallHead: false,
+  dark: false,
+  bg: '',
+  children: null,
+};
+
 Portlet.propTypes = {
-  rounded: PropTypes.bool.isRequired,
-  nonShadow: PropTypes.bool.isRequired,
-  bordered: PropTypes.bool.isRequired,
-  semiBordered: PropTypes.bool.isRequired,
-  smallHead: PropTypes.bool.isRequired,
-  dark: PropTypes.bool.isRequired,
-  bg: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  rounded: PropTypes.bool,
+  nonShadow: PropTypes.bool,
+  bordered: PropTypes.bool,
+  semiBordered: PropTypes.bool,
+  smallHead: PropTypes.bool,
+  dark: PropTypes.bool,
+  bg: PropTypes.string,
+  children: PropTypes.node,
 };
 
 Portlet.Body = Body;

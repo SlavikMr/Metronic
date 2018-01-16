@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { HeaderIcon } from './HeaderIcon';
 import Title from './Title';
 
-const HeaderCaption = ({ title = '', subtitle = '', icon }) => (
+const HeaderCaption = ({ title, subtitle, icon }) => (
   <div className="m-portlet__head-caption">
     <div className="m-portlet__head-title">
       { icon && <HeaderIcon icon={icon} /> }
@@ -12,10 +12,17 @@ const HeaderCaption = ({ title = '', subtitle = '', icon }) => (
   </div>
 );
 
+HeaderCaption.defaultProps = {
+  title: '',
+  subtitle: '',
+  icon: null,
+};
+
+
 HeaderCaption.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  icon: PropTypes.element.isRequired,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  icon: PropTypes.element,
 };
 
 export default HeaderCaption;
