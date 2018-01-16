@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Title = ({ title, subtitle }) => (
+const Title = ({ title = '', subtitle = '' }) => (
   <h3 className="m-portlet__head-text">
     {title}
     {subtitle && <small>{subtitle}</small>}
@@ -9,8 +9,8 @@ const Title = ({ title, subtitle }) => (
 );
 
 Title.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
 };
 
 export default Title;

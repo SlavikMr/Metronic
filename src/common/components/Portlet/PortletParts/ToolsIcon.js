@@ -6,4 +6,4 @@ const ToolsIcon = ({ icon }) => (
   </a>
 );
 
-export default ToolsIcon;
+export { ToolsIcon };

@@ -1,12 +1,14 @@
 import React from 'react';
 import ClassNames from 'classnames';
 import PropTypes from 'prop-types';
-import Header from './PortletParts/Header';
+
 import Body from './PortletParts/Body';
 import Footer from './PortletParts/Footer';
+import Header from './PortletParts/Header';
+import HeaderCaption from './PortletParts/HeaderCaption';
 import Title from './PortletParts/Title';
 import Tools from './PortletParts/Tools';
-import HeaderCaption from './PortletParts/HeaderCaption';
+import ToolsItem from './PortletParts/ToolsItem';
 
 
 const Portlet = ({
@@ -16,10 +18,9 @@ const Portlet = ({
   semiBordered = false,
   smallHead = false,
   dark = false,
-  bg,
-  children,
+  children = null,
+  bg = '',
 }) => {
-
   const portletClass = ClassNames(
     { 'm-portlet': true },
     { 'm-portlet--rounded': rounded },
@@ -44,15 +45,16 @@ Portlet.propTypes = {
   semiBordered: PropTypes.bool.isRequired,
   smallHead: PropTypes.bool.isRequired,
   dark: PropTypes.bool.isRequired,
-  children: PropTypes.node,
-  bg: PropTypes.string,
+  bg: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
-Portlet.Header = Header;
 Portlet.Body = Body;
 Portlet.Footer = Footer;
-Portlet.Title = Title;
+Portlet.Header = Header;
 Portlet.HeaderCaption = HeaderCaption;
+Portlet.Title = Title;
 Portlet.Tools = Tools;
+Portlet.ToolsItem = ToolsItem;
 
-export default Portlet;
+export { Portlet };

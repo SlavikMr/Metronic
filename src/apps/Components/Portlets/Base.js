@@ -1,9 +1,6 @@
 import React from 'react';
-import Portlet from 'common/components/Portlet/Portlet';
-import PortletRounded from 'common/components/Portlet/PortletRounded';
-import PortletNonShadow from 'common/components/Portlet/PortletNonShadow';
-import Icon from 'common/components/Portlet/PortletParts/Icon';
-import ToolsIcon from 'common/components/Portlet/PortletParts/ToolsIcon';
+// import  ToolsIcon from 'common/components/Portlet/PortletParts/ToolsIcon';
+import { Portlet, ToolsIcon } from 'common/components/Portlet';
 
 const iconList = [
   <ToolsIcon />,
@@ -26,73 +23,73 @@ const Base = () => (
             {Lorem}
           </Portlet.Body>
         </Portlet>
-        <PortletRounded>
+        <Portlet>
           <Portlet.Header>
             <Portlet.HeaderCaption title="Rounded portlet" subtitle="portlet sub title" />
           </Portlet.Header>
           <Portlet.Body>
             {Lorem}
           </Portlet.Body>
-        </PortletRounded>
+        </Portlet>
 
-        <PortletNonShadow>
+        <Portlet>
           <Portlet.Header >
-            <Portlet.HeaderCaption title="Non shadow style" subtitle="portlet sub title" icon={Icon} />
+            <Portlet.HeaderCaption title="Non shadow style" subtitle="portlet sub title" icon="flaticon-piggy-bank" />
           </Portlet.Header>
           <Portlet.Body>
             {Lorem}
           </Portlet.Body>
           <Portlet.Footer>I am portlet footer</Portlet.Footer>
-        </PortletNonShadow>
+        </Portlet>
         <Portlet>
           <Portlet.Body>
-            <PortletNonShadow bordered>
+            <Portlet bordered>
               <Portlet.Header>
                 <Portlet.HeaderCaption title="Bordered style" />
               </Portlet.Header>
               <Portlet.Body>
                 {Lorem}
               </Portlet.Body>
-            </PortletNonShadow>
-            <PortletRounded semiBordered>
+            </Portlet>
+            <Portlet semiBordered>
               <Portlet.Header>
                 <Portlet.HeaderCaption title="Semi Bordered Style" />
               </Portlet.Header>
               <Portlet.Body>
                 {Lorem}
               </Portlet.Body>
-            </PortletRounded>
-            <PortletRounded bordered>
+            </Portlet>
+            <Portlet bordered>
               <Portlet.Header>
                 <Portlet.HeaderCaption title="Bordered & Rounded Styles" />
               </Portlet.Header>
               <Portlet.Body>
                 {Lorem}
               </Portlet.Body>
-            </PortletRounded>
-            <PortletRounded bordered smallHead>
+            </Portlet>
+            <Portlet bordered smallHead>
               <Portlet.Header>
                 <Portlet.HeaderCaption title="Portlet Small Head" />
               </Portlet.Header>
               <Portlet.Body>
                 {Lorem}
               </Portlet.Body>
-            </PortletRounded>
-            <PortletRounded bordered>
+            </Portlet>
+            <Portlet bordered>
               <Portlet.Header>
                 <Portlet.HeaderCaption title="Bordered, Rounded & Air Styles" />
               </Portlet.Header>
               <Portlet.Body>
                 {Lorem}
               </Portlet.Body>
-            </PortletRounded>
+            </Portlet>
           </Portlet.Body>
         </Portlet>
       </div>
       <div className="col-lg-6">
         <Portlet>
           <Portlet.Header>
-            <Portlet.HeaderCaption title="Icon Title" subtitle="portlet sub title" icon={Icon} />
+            <Portlet.HeaderCaption title="Icon Title" subtitle="portlet sub title" icon="flaticon-piggy-bank" />
           </Portlet.Header>
           <Portlet.Body>
             {Lorem}
@@ -100,7 +97,7 @@ const Base = () => (
         </Portlet>
         <Portlet>
           <Portlet.Header>
-            <Portlet.HeaderCaption title="Portlet Footer" icon={Icon} />
+            <Portlet.HeaderCaption title="Portlet Footer" icon="flaticon-piggy-bank" />
           </Portlet.Header>
           <Portlet.Body>
             {Lorem}
@@ -110,7 +107,7 @@ const Base = () => (
 
         <Portlet>
           <Portlet.Header>
-            <Portlet.HeaderCaption title="Portlet Action Icons" icon={Icon} />
+            <Portlet.HeaderCaption title="Portlet Action Icons" icon="flaticon-piggy-bank" />
             <Portlet.Tools navLinks={iconList} />
           </Portlet.Header>
           <Portlet.Body>
@@ -119,7 +116,7 @@ const Base = () => (
         </Portlet>
         <Portlet>
           <Portlet.Header>
-            <Portlet.HeaderCaption title="Scrollable Body" icon={Icon} />
+            <Portlet.HeaderCaption title="Scrollable Body" icon="flaticon-piggy-bank" />
           </Portlet.Header>
           <Portlet.Body scrollable>
             {Lorem}
@@ -128,7 +125,7 @@ const Base = () => (
         </Portlet>
         <Portlet dark>
           <Portlet.Header>
-            <Portlet.HeaderCaption title="Dark Skin" icon={Icon} />
+            <Portlet.HeaderCaption title="Dark Skin" icon="flaticon-piggy-bank" />
             <Portlet.Tools navLinks={iconList} />
           </Portlet.Header>
           <Portlet.Body>
@@ -137,7 +134,7 @@ const Base = () => (
         </Portlet>
         <Portlet bg="brand">
           <Portlet.Header>
-            <Portlet.HeaderCaption title="Solid Background Dark Skin" icon={Icon} />
+            <Portlet.HeaderCaption title="Solid Background Dark Skin" icon="flaticon-piggy-bank" />
             <Portlet.Tools navLinks={iconList} />
           </Portlet.Header>
           <Portlet.Body>

@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ToolsItem from './ToolsItem';
 
-const Tools = ({ navLinks }) => {
+const Tools = ({ navLinks = [] }) => {
   const linksList = navLinks.map(elm => <ToolsItem>{elm}</ToolsItem>);
-
   return (
     <div className="m-portlet__head-tools">
       <ul className="m-portlet__nav">
@@ -15,7 +14,7 @@ const Tools = ({ navLinks }) => {
 };
 
 Tools.propTypes = {
-  navLinks: PropTypes.elements,
+  navLinks: PropTypes.array.isRequired,
 };
 
 export default Tools;
