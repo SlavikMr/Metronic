@@ -99,6 +99,28 @@ export default class Dashboard extends Component {
                           <span className="m-menu__link-text">Spinner</span>
                         </NavLink>
                       </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/base/tabs"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Tabs</span>
+                        </NavLink>
+                      </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/base/navs"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Navs</span>
+                        </NavLink>
+                      </li>
                     </ul>
                   </div>
                 </li>
