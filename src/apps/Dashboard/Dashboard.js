@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
                   </h4>
                   <i className="m-menu__section-icon flaticon-more-v3" />
                 </li>
-                <li className="m-menu__item m-menu__item--submenu">
+                <li className="m-menu__item m-menu__item--submenu m-menu__item--open">
                   <a href="" className="m-menu__link m-menu__toggle">
                     <i className="m-menu__link-icon flaticon-layers" />
                     <span className="m-menu__link-text">Base</span>
