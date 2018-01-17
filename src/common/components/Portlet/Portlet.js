@@ -1,5 +1,5 @@
 import React from 'react';
-import ClassNames from 'classnames';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import Body from './PortletParts/Body';
@@ -12,7 +12,7 @@ import ToolsItem from './PortletParts/ToolsItem';
 
 
 const Portlet = ({ rounded, nonShadow, bordered, semiBordered, smallHead, dark, bg, children }) => {
-  const portletClass = ClassNames(
+  const portletClass = classNames(
     { 'm-portlet': true },
     { 'm-portlet--rounded': rounded },
     { 'm-portlet--unair': nonShadow },
