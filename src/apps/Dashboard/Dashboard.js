@@ -149,6 +149,17 @@ export default class Dashboard extends Component {
                           <span className="m-menu__link-text">Base Portlets</span>
                         </NavLink>
                       </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/portlets/tabbed"
+                          exact
+                          className="m-menu__link"
+                          activeClassName="m-menu__link-selected"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Tabbed Portlets</span>
+                        </NavLink>
+                      </li>
                     </ul>
                   </div>
                 </li>
