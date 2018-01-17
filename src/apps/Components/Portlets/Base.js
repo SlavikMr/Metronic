@@ -118,7 +118,7 @@ const Base = () => (
           <Portlet.Header>
             <Portlet.HeaderCaption title="Scrollable Body" icon="flaticon-piggy-bank" />
           </Portlet.Header>
-          <Portlet.Body scrollable>
+          <Portlet.Body scrollable >
             {Lorem}
             {Lorem}
           </Portlet.Body>

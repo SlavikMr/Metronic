@@ -7,12 +7,12 @@ const HeaderIcon = ({ icon }) => (
   </span>
 );
 
-HeaderIcon.defaultProps = {
-  icon: '',
-};
-
 HeaderIcon.propTypes = {
   icon: PropTypes.string,
+};
+
+HeaderIcon.defaultProps = {
+  icon: '',
 };
 
 export { HeaderIcon };

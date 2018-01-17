@@ -12,17 +12,16 @@ const HeaderCaption = ({ title, subtitle, icon }) => (
   </div>
 );
 
-HeaderCaption.defaultProps = {
-  title: '',
-  subtitle: '',
-  icon: null,
-};
-
-
 HeaderCaption.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   icon: PropTypes.element,
+};
+
+HeaderCaption.defaultProps = {
+  title: '',
+  subtitle: '',
+  icon: null,
 };
 
 export default HeaderCaption;

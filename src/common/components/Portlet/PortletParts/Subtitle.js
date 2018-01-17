@@ -7,12 +7,12 @@ const Subtitle = ({ subtitle }) => (
   </small>
 );
 
-Subtitle.defaultProps = {
-  subtitle: '',
-};
-
 Subtitle.propTypes = {
   subtitle: PropTypes.string,
+};
+
+Subtitle.defaultProps = {
+  subtitle: '',
 };
 
 export default Subtitle;

@@ -9,14 +9,14 @@ const Title = ({ title, subtitle }) => (
   </h3>
 );
 
-Title.defaultProps = {
-  title: '',
-  subtitle: '',
-};
-
 Title.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
+};
+
+Title.defaultProps = {
+  title: '',
+  subtitle: '',
 };
 
 export default Title;

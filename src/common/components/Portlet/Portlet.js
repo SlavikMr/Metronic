@@ -29,17 +29,6 @@ const Portlet = ({ rounded, nonShadow, bordered, semiBordered, smallHead, dark, 
   );
 };
 
-Portlet.defaultProps = {
-  rounded: false,
-  nonShadow: false,
-  bordered: false,
-  semiBordered: false,
-  smallHead: false,
-  dark: false,
-  bg: '',
-  children: null,
-};
-
 Portlet.propTypes = {
   rounded: PropTypes.bool,
   nonShadow: PropTypes.bool,
@@ -49,6 +38,17 @@ Portlet.propTypes = {
   dark: PropTypes.bool,
   bg: PropTypes.string,
   children: PropTypes.node,
+};
+
+Portlet.defaultProps = {
+  rounded: false,
+  nonShadow: false,
+  bordered: false,
+  semiBordered: false,
+  smallHead: false,
+  dark: false,
+  bg: '',
+  children: null,
 };
 
 Portlet.Body = Body;

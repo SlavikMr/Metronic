@@ -8,12 +8,12 @@ const Header = ({ children }) => (
   </div>
 );
 
-Header.defaultProps = {
-  children: null,
-};
-
 Header.propTypes = {
   children: PropTypes.node,
+};
+
+Header.defaultProps = {
+  children: null,
 };
 
 export default Header;

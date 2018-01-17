@@ -13,12 +13,12 @@ const Tools = ({ navLinks }) => {
   );
 };
 
-Tools.defaultProps = {
-  navLinks: [],
-};
-
 Tools.propTypes = {
   navLinks: PropTypes.array,
+};
+
+Tools.defaultProps = {
+  navLinks: [],
 };
 
 export default Tools;

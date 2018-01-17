@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Body = ({ scrollable, children }) => {
+const Body = ({ scrollable, maxHeight, children }) => {
   const styles = {
     overflow: 'auto',
-    maxHeight: '200px',
-    height: '200px',
+    maxHeight: !Number.isNaN(Number(maxHeight)) ? Number(maxHeight) : maxHeight,
   };
   return (
     <div className="m-portlet__body">
@@ -20,14 +19,19 @@ const Body = ({ scrollable, children }) => {
   );
 };
 
+Body.propTypes = {
+  scrollable: PropTypes.bool,
+  maxHeight: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  children: PropTypes.node,
+};
+
 Body.defaultProps = {
   scrollable: false,
   children: null,
-};
-
-Body.propTypes = {
-  scrollable: PropTypes.bool,
-  children: PropTypes.node,
+  maxHeight: 200,
 };
 
 export default Body;

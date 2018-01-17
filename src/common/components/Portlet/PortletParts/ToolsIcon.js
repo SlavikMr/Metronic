@@ -7,12 +7,12 @@ const ToolsIcon = ({ icon }) => (
   </a>
 );
 
-ToolsIcon.defaultProps = {
-  icon: 'la la-close',
-};
-
 ToolsIcon.propTypes = {
   icon: PropTypes.string,
+};
+
+ToolsIcon.defaultProps = {
+  icon: 'la la-close',
 };
 
 export { ToolsIcon };
