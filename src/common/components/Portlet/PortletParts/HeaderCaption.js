@@ -15,13 +15,13 @@ const HeaderCaption = ({ title, subtitle, icon }) => (
 HeaderCaption.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  icon: PropTypes.element,
+  icon: PropTypes.string,
 };
 
 HeaderCaption.defaultProps = {
   title: '',
   subtitle: '',
-  icon: null,
+  icon: '',
 };
 
 export default HeaderCaption;
