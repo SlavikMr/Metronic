@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import Icon from './Icon';
 
 const Header = ({ children }) => (
   <div className="m-portlet__head">
