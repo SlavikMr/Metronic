@@ -10,7 +10,7 @@ const Lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting 
 
 const Base = () => (
   <React.Fragment>
-    <h3>Base 1</h3>
+    <h3>Default style</h3>
     <div className="row">
       <div className="col-lg-6">
         <Portlet>
