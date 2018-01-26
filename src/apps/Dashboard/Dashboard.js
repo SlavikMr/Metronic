@@ -164,9 +164,66 @@ export default class Dashboard extends Component {
                                 <span className="m-menu__link-text">Default Style</span>
                               </NavLink>
                             </li>
+                            <li className="m-menu__item">
+                              <NavLink
+                                to="/components/buttons/square"
+                                exact
+                                className="m-menu__link"
+                                activeClassName="m-menu__link-selected"
+                              >
+                                <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                                <span className="m-menu__link-text">Square Style</span>
+                              </NavLink>
+                            </li>
+                            <li className="m-menu__item">
+                              <NavLink
+                                to="/components/buttons/pill"
+                                exact
+                                className="m-menu__link"
+                                activeClassName="m-menu__link-selected"
+                              >
+                                <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                                <span className="m-menu__link-text">Pill Style</span>
+                              </NavLink>
+                            </li>
+                            <li className="m-menu__item">
+                              <NavLink
+                                to="/components/buttons/air"
+                                exact
+                                className="m-menu__link"
+                                activeClassName="m-menu__link-selected"
+                              >
+                                <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                                <span className="m-menu__link-text">Air Style</span>
+                              </NavLink>
+                            </li>
                           </ul>
                         </div>
                       </li>
+
+                      <li className="m-menu__item m-menu__item--submenu m-menu__item--expanded ">
+
+                        <NavLink
+                          to="/components/buttons/group"
+                          exact
+                          className="m-menu__link"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text"> Button Group</span>
+                        </NavLink>
+                      </li>
+                      <li className="m-menu__item m-menu__item--submenu m-menu__item--expanded ">
+
+                        <NavLink
+                          to="/components/buttons/modal"
+                          exact
+                          className="m-menu__link"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Modal</span>
+                        </NavLink>
+                      </li>
+
                     </ul>
                   </div>
                 </li>

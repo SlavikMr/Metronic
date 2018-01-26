@@ -12,7 +12,7 @@ const Dashboard = asyncComponent(() => (
     new Promise((resolve) => { // TODO: Fake timeout to see loader
       setTimeout(() => {
         resolve(module);
-      }, 400);
+      }, 0);
     })),
   )
 ));
