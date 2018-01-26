@@ -122,7 +122,7 @@ const BtnGroup = () => (
                     <ButtonGroup mr2>
                       <Button color="secondary" mBtn><i className="la la-file-text-o">{null}</i></Button>
                       <Button color="secondary" mBtn><i className="la la-bold">{null}</i></Button>
-                      <Button color="secondary" mBtn><i className="la la-paperclip">{null}}</i></Button>
+                      <Button color="secondary" mBtn><i className="la la-paperclip">{null}</i></Button>
                     </ButtonGroup>
                     <ButtonGroup mr2>
                       <Button color="secondary" mBtn><i className="la la-floppy-o">{null}</i></Button>
