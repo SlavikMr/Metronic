@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import { Button as BButton } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-class Button extends React.Component {
+export class Button extends React.Component {
   render() {
     const { wide, className, mBtn, mBtnCust, label,
       doubleOutline, bolder, upper, labelCol, ...other } = this.props;
+
     const cls = classNames(className,
       { 'm-btn--wide': wide },
       { 'm-btn': mBtn },
@@ -16,6 +17,7 @@ class Button extends React.Component {
       { 'm-btn--bolder': bolder },
       { 'm-btn--uppercase': upper },
       { [`m-btn--label-${labelCol}`]: labelCol });
+
     return <BButton {...other} className={cls} />;
   }
 }
@@ -44,4 +46,3 @@ Button.defaultProps = {
   labelCol: '',
 };
 
-export { Button };
