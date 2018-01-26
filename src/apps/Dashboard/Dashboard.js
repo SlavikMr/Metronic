@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
                   </h4>
                   <i className="m-menu__section-icon flaticon-more-v3" />
                 </li>
-                <li className="m-menu__item m-menu__item--submenu">
+                <li className="m-menu__item m-menu__item--submenu m-menu__item--open">
                   <a href="" className="m-menu__link m-menu__toggle">
                     <i className="m-menu__link-icon flaticon-layers" />
                     <span className="m-menu__link-text">Base</span>
@@ -99,6 +99,28 @@ export default class Dashboard extends Component {
                           <span className="m-menu__link-text">Spinner</span>
                         </NavLink>
                       </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/base/tabs"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Tabs</span>
+                        </NavLink>
+                      </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/base/navs"
+                          exact
+                          activeClassName="m-menu__link-selected"
+                          className="m-menu__link"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Navs</span>
+                        </NavLink>
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -125,6 +147,17 @@ export default class Dashboard extends Component {
                         >
                           <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
                           <span className="m-menu__link-text">Base Portlets</span>
+                        </NavLink>
+                      </li>
+                      <li className="m-menu__item">
+                        <NavLink
+                          to="/components/portlets/tabbed"
+                          exact
+                          className="m-menu__link"
+                          activeClassName="m-menu__link-selected"
+                        >
+                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
+                          <span className="m-menu__link-text">Tabbed Portlets</span>
                         </NavLink>
                       </li>
                     </ul>
