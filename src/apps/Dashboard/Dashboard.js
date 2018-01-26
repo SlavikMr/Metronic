@@ -245,18 +245,6 @@ export default class Dashboard extends Component {
                           <span className="m-menu__link-text"> Button Group</span>
                         </NavLink>
                       </li>
-                      <li className="m-menu__item m-menu__item--submenu m-menu__item--expanded ">
-
-                        <NavLink
-                          to="/components/buttons/modal"
-                          exact
-                          className="m-menu__link"
-                        >
-                          <i className="m-menu__link-bullet m-menu__link-bullet--dot"><span /></i>
-                          <span className="m-menu__link-text">Modal</span>
-                        </NavLink>
-                      </li>
-
                     </ul>
                   </div>
                 </li>
