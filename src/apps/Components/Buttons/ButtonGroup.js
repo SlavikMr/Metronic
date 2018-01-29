@@ -1,16 +1,17 @@
 import React from 'react';
-import {
-  Row, Col, InputGroup, InputGroupAddon, Input,
-  DropdownMenu,
-} from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { Button } from 'common/components/Button/Default';
 import { Portlet } from 'common/components/Portlet';
-import { ButtonGroup } from 'common/components/Button/Group';
 import { PillButtonGroup } from 'common/components/Button/PillGroup';
-import { ButtonDropdown } from 'common/components/Button/ButtonDropdown';
-import { DropdownItem } from 'common/components/Button/DropdownItem';
-import { ButtonToolbar } from 'common/components/Button/Toolbar';
+import { ButtonGroup } from 'common/components/Button/Group';
+import { Dropdown } from 'common/components/Button/Dropdown';
 import { DropdownToggle } from 'common/components/Button/DropdownToggle';
+import { DropdownMenu } from 'common/components/Button/DropdownMenu';
+import { DropdownItem } from 'common/components/Button/DropdownItem';
+import { Input } from 'common/components/Button/Input';
+import { InputGroupAddon } from 'common/components/Button/InputGroupAddon';
+import { InputGroup } from 'common/components/Button/InputGroup';
+import { ButtonToolbar } from 'common/components/Button/Toolbar';
 import { Section, SectionContent, Demo } from './DefaultStyle';
 
 const toolbarTitle = (
@@ -67,7 +68,7 @@ const pillNestingSubtitle = (
 const BtnGroup = () => (
   <React.Fragment>
     <Row>
-      <Col lg="6">
+      <Col md="6">
         <Portlet>
           <Portlet.Header>
             <Portlet.HeaderCaption title="Base Buttons" />
@@ -197,15 +198,15 @@ const BtnGroup = () => (
                     <Button color="secondary" mBtn><i className="la la-floppy-o">{null}</i></Button>
                     <Button color="secondary" mBtn><i className="la la-header">{null}</i></Button>
                     <Button color="secondary" mBtn><i className="la la-italic">{null}</i></Button>
-                    <ButtonDropdown>
+                    <Dropdown group>
                       <DropdownToggle caret>
                         Dropdown
                       </DropdownToggle>
                       <DropdownMenu>
-                        <DropdownItem>Dropdown Link</DropdownItem>
-                        <DropdownItem>Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
                       </DropdownMenu>
-                    </ButtonDropdown>
+                    </Dropdown>
                   </ButtonGroup>
                 </Demo>
               </SectionContent>
@@ -216,26 +217,25 @@ const BtnGroup = () => (
                 <Demo>
                   <ButtonGroup vertical>
                     <Button color="secondary">Button</Button>
-                    <ButtonDropdown>
+                    <Dropdown group>
                       <DropdownToggle caret>
                         Dropdown
                       </DropdownToggle>
                       <DropdownMenu>
-                        <DropdownItem>Dropdown Link</DropdownItem>
-                        <DropdownItem>Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
                       </DropdownMenu>
-                    </ButtonDropdown>
+                    </Dropdown >
                     <Button color="secondary">Button</Button>
-                    <ButtonDropdown>
+                    <Dropdown group>
                       <DropdownToggle caret>
                         Dropdown
                       </DropdownToggle>
                       <DropdownMenu>
-                        <DropdownItem>Dropdown Link</DropdownItem>
-                        <DropdownItem>Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
                       </DropdownMenu>
-                    </ButtonDropdown>
-
+                    </Dropdown>
                   </ButtonGroup>
                 </Demo>
               </SectionContent>
@@ -244,7 +244,7 @@ const BtnGroup = () => (
           </Portlet.Body>
         </Portlet>
       </Col>
-      <Col lg="6">
+      <Col md="6">
         <Portlet>
           <Portlet.Header>
             <Portlet.HeaderCaption title="Custom Buttons" />
@@ -374,15 +374,15 @@ const BtnGroup = () => (
                     <Button color="secondary" mBtn><i className="la la-floppy-o">{null}</i></Button>
                     <Button color="secondary" mBtn><i className="la la-header">{null}</i></Button>
                     <Button color="secondary" mBtn><i className="la la-italic">{null}</i></Button>
-                    <ButtonDropdown mGroup>
+                    <Dropdown group>
                       <DropdownToggle mBtn mPill caret>
                         Dropdown
                       </DropdownToggle>
                       <DropdownMenu>
-                        <DropdownItem>Dropdown Link</DropdownItem>
-                        <DropdownItem>Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
+                        <DropdownItem tag="a">Dropdown Link</DropdownItem>
                       </DropdownMenu>
-                    </ButtonDropdown>
+                    </Dropdown>
                   </PillButtonGroup>
                 </Demo>
               </SectionContent>
