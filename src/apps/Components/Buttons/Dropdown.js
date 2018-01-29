@@ -14,12 +14,12 @@ const sizing = (
   including default and split dropdown buttons.
   </React.Fragment>);
 
-const dropup = (
+const items = (
   <React.Fragment>
     You can optionally use <code>button</code> elements in your dropdowns instead
   </React.Fragment>);
 
-const items = (
+const dropup = (
   <React.Fragment>
     Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent element.
   </React.Fragment>);
@@ -372,9 +372,9 @@ const BtnDropdown = () => (
                           Dropdown menu
                         </DropdownToggle>
                         <DropdownMenu>
-                          <DropdownItem tag="a">Action</DropdownItem>
-                          <DropdownItem tag="a">Another Action</DropdownItem>
-                          <DropdownItem tag="a">Something else here</DropdownItem>
+                          <DropdownItem>Action</DropdownItem>
+                          <DropdownItem>Another Action</DropdownItem>
+                          <DropdownItem>Something else here</DropdownItem>
                         </DropdownMenu>
                       </Dropdown>
                     </Col>
@@ -384,9 +384,9 @@ const BtnDropdown = () => (
                           Dropdown menu
                         </DropdownToggle>
                         <DropdownMenu>
-                          <DropdownItem tag="a">Action</DropdownItem>
-                          <DropdownItem tag="a">Another Action</DropdownItem>
-                          <DropdownItem tag="a">Something else here</DropdownItem>
+                          <DropdownItem>Action</DropdownItem>
+                          <DropdownItem>Another Action</DropdownItem>
+                          <DropdownItem>Something else here</DropdownItem>
                         </DropdownMenu>
                       </Dropdown>
                     </Col>
@@ -396,9 +396,9 @@ const BtnDropdown = () => (
                           Dropdown menu
                         </DropdownToggle>
                         <DropdownMenu>
-                          <DropdownItem tag="a">Action</DropdownItem>
-                          <DropdownItem tag="a">Another Action</DropdownItem>
-                          <DropdownItem tag="a">Something else here</DropdownItem>
+                          <DropdownItem>Action</DropdownItem>
+                          <DropdownItem>Another Action</DropdownItem>
+                          <DropdownItem>Something else here</DropdownItem>
                         </DropdownMenu>
                       </Dropdown>
                     </Col>
