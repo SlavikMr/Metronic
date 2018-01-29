@@ -3,22 +3,24 @@ import classNames from 'classnames';
 import { Button as BButton } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-export const Button = (props) => {
-  const { wide, className, mBtn, mBtnCust, label,
-    doubleOutline, bolder, upper, labelCol, ...other } = props;
+export class Button extends React.Component {
+  render() {
+    const { wide, className, mBtn, mBtnCust, label,
+      doubleOutline, bolder, upper, labelCol, ...other } = this.props;
 
-  const cls = classNames(className, {
-    'm-btn--wide': wide,
-    'm-btn': mBtn,
-    'm-btn--custom': mBtnCust,
-    'm-btn--label-accent': label,
-    'm-btn--outline-2x': doubleOutline,
-    'm-btn--bolder': bolder,
-    'm-btn--uppercase': upper,
-    [`m-btn--label-${labelCol}`]: labelCol,
-  });
-  return <BButton {...other} className={cls} />;
-};
+    const cls = classNames(className,
+      { 'm-btn--wide': wide },
+      { 'm-btn': mBtn },
+      { 'm-btn--custom': mBtnCust },
+      { 'm-btn--label-accent': label },
+      { 'm-btn--outline-2x': doubleOutline },
+      { 'm-btn--bolder': bolder },
+      { 'm-btn--uppercase': upper },
+      { [`m-btn--label-${labelCol}`]: labelCol });
+
+    return <BButton {...other} className={cls} />;
+  }
+}
 
 Button.propTypes = {
   wide: PropTypes.bool,

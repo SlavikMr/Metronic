@@ -3,14 +3,17 @@ import { ButtonGroup as BButtonGroup } from 'reactstrap';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export const ButtonGroup = ({ className, mGroup, mr2, ...other }) => {
-  const cls = classNames(className, {
-    'm-btn-group': mGroup,
-    'mr-2': mr2,
-  },
+export const ButtonGroup = ({ className, children, mGroup, mr2, ...other }) => {
+  const cls = classNames(className,
+    { 'm-btn-group': mGroup },
+    { 'mr-2': mr2 },
   );
 
-  return <BButtonGroup {...other} className={cls} />;
+  return (
+    <BButtonGroup {...other} className={cls}>
+      {children}
+    </BButtonGroup>
+  );
 };
 
 ButtonGroup.propTypes = {

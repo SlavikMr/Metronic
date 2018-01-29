@@ -4,7 +4,6 @@ import SquareStyle from './SquareStyle';
 import PillStyle from './PillStyle';
 import AirStyle from './AirStyle';
 import BtnGroup from './ButtonGroup';
-import BtnDropdown from './Dropdown';
 
 export const routes = new RouterGenerator('/components/buttons')
   .addRoute('/default', DefaultStyle, true)
@@ -12,5 +11,4 @@ export const routes = new RouterGenerator('/components/buttons')
   .addRoute('/pill', PillStyle, true)
   .addRoute('/air', AirStyle, true)
   .addRoute('/group', BtnGroup, true)
-  .addRoute('/dropdown', BtnDropdown, true)
   .getRoutes();

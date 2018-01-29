@@ -3,18 +3,21 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Button } from './Default';
 
-export const PillButton = (props) => {
-  const { className, ...other } = props;
+export class PillButton extends React.Component {
+  render() {
+    const { air, ...other } = this.props;
+    const cls = classNames(
+      { 'm-btn--pill': true },
+      { 'm-btn--air': air });
 
-  const cls = classNames(className, 'm-btn--pill');
-
-  return <Button {...other} className={cls} />;
-};
+    return <Button {...other} className={cls} />;
+  }
+}
 
 PillButton.propTypes = {
-  className: PropTypes.string,
+  air: PropTypes.bool,
 };
 
 PillButton.defaultProps = {
-  className: '',
+  air: false,
 };
