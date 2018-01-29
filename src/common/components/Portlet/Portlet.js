@@ -2,62 +2,53 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import Body from './Body';
-import Footer from './Footer';
-import Header from './Header';
-import HeaderCaption from './HeaderCaption';
-import Title from './Title';
-import HeaderTools from './HeaderTools';
-import ToolsItem from './ToolsItem';
+import Body from './PortletParts/Body';
+import Footer from './PortletParts/Footer';
+import Header from './PortletParts/Header';
+import HeaderCaption from './PortletParts/HeaderCaption';
+import Title from './PortletParts/Title';
+import Tools from './PortletParts/Tools';
+import ToolsItem from './PortletParts/ToolsItem';
 
 
-const Portlet = ({ bgColor, bordered, children, dark, headerColor, nonShadow, rounded, semiBordered,
-  smallHead, tabbed, ...other }) => {
+const Portlet = ({ rounded, nonShadow, bordered, semiBordered, smallHead, dark, bg, children }) => {
   const portletClass = classNames(
     { 'm-portlet': true },
     { 'm-portlet--rounded': rounded },
     { 'm-portlet--unair': nonShadow },
     { 'm-portlet--bordered': bordered || semiBordered },
-    { 'm-portlet--bordered-semi': semiBordered || dark || bgColor },
+    { 'm-portlet--bordered-semi': semiBordered || dark || bg },
     { 'm-portlet--head-sm': smallHead },
-    { 'm-portlet--tabs': tabbed },
-    { 'm-portlet--skin-dark': dark || bgColor },
-    { 'm-portlet--head-solid-bg': headerColor },
-    { [`m--bg-${bgColor}`]: bgColor },
-    { [`m-portlet--${headerColor}`]: headerColor },
-
+    { 'm-portlet--skin-dark': dark || bg },
+    { [`m--bg-${bg}`]: bg },
   );
   return (
-    <div className={portletClass} {...other}>
+    <div className={portletClass}>
       {children}
     </div>
   );
 };
 
 Portlet.propTypes = {
-  bgColor: PropTypes.string,
-  bordered: PropTypes.bool,
-  children: PropTypes.node,
-  dark: PropTypes.bool,
-  headerColor: PropTypes.string,
-  nonShadow: PropTypes.bool,
   rounded: PropTypes.bool,
+  nonShadow: PropTypes.bool,
+  bordered: PropTypes.bool,
   semiBordered: PropTypes.bool,
   smallHead: PropTypes.bool,
-  tabbed: PropTypes.bool,
+  dark: PropTypes.bool,
+  bg: PropTypes.string,
+  children: PropTypes.node,
 };
 
 Portlet.defaultProps = {
-  bgColor: '',
-  bordered: false,
-  children: null,
-  dark: false,
-  headerColor: '',
-  nonShadow: false,
   rounded: false,
+  nonShadow: false,
+  bordered: false,
   semiBordered: false,
   smallHead: false,
-  tabbed: false,
+  dark: false,
+  bg: '',
+  children: null,
 };
 
 Portlet.Body = Body;
@@ -65,7 +56,7 @@ Portlet.Footer = Footer;
 Portlet.Header = Header;
 Portlet.HeaderCaption = HeaderCaption;
 Portlet.Title = Title;
-Portlet.HeaderTools = HeaderTools;
+Portlet.Tools = Tools;
 Portlet.ToolsItem = ToolsItem;
 
 export { Portlet };

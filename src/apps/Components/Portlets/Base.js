@@ -1,6 +1,10 @@
 import React from 'react';
-import { Portlet } from 'common/components/Portlet';
-import { Button } from 'common/components/Button';
+// import  ToolsIcon from 'common/components/Portlet/PortletParts/ToolsIcon';
+import { Portlet, ToolsIcon } from 'common/components/Portlet';
+
+const iconList = [
+  <ToolsIcon />,
+];
 
 const Lorem = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.";
 
@@ -33,6 +37,7 @@ const Base = () => (
           <Portlet.Body>
             {Lorem}
           </Portlet.Body>
+          <Portlet.Footer>I am portlet footer</Portlet.Footer>
         </Portlet>
         <Portlet>
           <Portlet.Body>
@@ -95,24 +100,18 @@ const Base = () => (
           <Portlet.Body>
             {Lorem}
           </Portlet.Body>
-          <Portlet.Footer>
-            <div className="row align-items-center">
-              <div className="col-lg-6 m--valign-middle">
-                Portlet footer:
-              </div>
-              <div className="col-lg-6 m--align-right">
-                <Button tag="button" color="brand">Submit</Button>
-                <span className="m--margin-left-10">
-                  {'or ' }
-                  <a href="#" className="m-link m--font-bold">
-                    Cancel
-                  </a>
-                </span>
-              </div>
-            </div>
-          </Portlet.Footer>
+          <Portlet.Footer>Portlet footer:</Portlet.Footer>
         </Portlet>
 
+        <Portlet>
+          <Portlet.Header>
+            <Portlet.HeaderCaption title="Portlet Action Icons" icon="flaticon-piggy-bank" />
+            <Portlet.Tools navLinks={iconList} />
+          </Portlet.Header>
+          <Portlet.Body>
+            {Lorem}
+          </Portlet.Body>
+        </Portlet>
         <Portlet>
           <Portlet.Header>
             <Portlet.HeaderCaption title="Scrollable Body" icon="flaticon-piggy-bank" />
@@ -121,36 +120,20 @@ const Base = () => (
             {Lorem}
             {Lorem}
           </Portlet.Body>
-          <Portlet.Footer>
-            <div className="row align-items-center">
-              <div className="col-lg-12">
-                <Button type="submit" color="success">Submit</Button>{' '}
-                <Button type="submit" color="secondary">Cancel</Button>
-              </div>
-            </div>
-          </Portlet.Footer>
         </Portlet>
-
-        <Portlet>
-          <Portlet.Header>
-            <Portlet.HeaderCaption title="Portlet Action Icons" icon="flaticon-piggy-bank" />
-          </Portlet.Header>
-          <Portlet.Body>
-            {Lorem}
-          </Portlet.Body>
-        </Portlet>
-
         <Portlet dark>
           <Portlet.Header>
             <Portlet.HeaderCaption title="Dark Skin" icon="flaticon-piggy-bank" />
+            <Portlet.Tools navLinks={iconList} />
           </Portlet.Header>
           <Portlet.Body>
             {Lorem}
           </Portlet.Body>
         </Portlet>
-        <Portlet bgColor="brand">
+        <Portlet bg="brand">
           <Portlet.Header>
             <Portlet.HeaderCaption title="Solid Background Dark Skin" icon="flaticon-piggy-bank" />
+            <Portlet.Tools navLinks={iconList} />
           </Portlet.Header>
           <Portlet.Body>
             {Lorem}

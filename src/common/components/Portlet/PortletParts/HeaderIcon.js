@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'common/components/Base';
 
 const HeaderIcon = ({ icon }) => (
   <span className="m-portlet__head-icon">
-    <Icon icon={icon} />
+    <i className={icon} />
   </span>
 );
 
