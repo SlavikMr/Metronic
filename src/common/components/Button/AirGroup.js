@@ -11,10 +11,10 @@ export const AirButtonGroup = (props) => {
   return <PillButtonGroup {...other} className={cls} />;
 };
 
-PillButtonGroup.propTypes = {
+AirButtonGroup.propTypes = {
   className: PropTypes.string,
 };
 
-PillButtonGroup.defaultProps = {
+AirButtonGroup.defaultProps = {
   className: '',
 };

@@ -749,7 +749,7 @@ const BtnGroup = () => (
                           <Dropdown group>
                             <DropdownToggle mBtn mAir caret>
                               Dropdown
-                      </DropdownToggle>
+                            </DropdownToggle>
                             <DropdownMenu>
                               <DropdownItem tag="a">Dropdown Link</DropdownItem>
                               <DropdownItem tag="a">Dropdown Link</DropdownItem>
